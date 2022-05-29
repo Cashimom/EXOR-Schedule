@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PlanController;
 
 
 /*
@@ -19,5 +20,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Auth
 Route::get('/login', [AuthController::class, 'showLogin']);
 Route::get('/register', [AuthController::class, 'showRegister']);
+
+// Plan
+Route::get('/index', [PlanController::class, 'showIndex']);
+Route::get('/input_plan', [PlanController::class, 'showInputPlan']);
+Route::get('/edit_plan', [PlanController::class, 'showEditPlan']);
+Route::get('/resolution_plan', [PlanController::class, 'showResolutionPlan']);
