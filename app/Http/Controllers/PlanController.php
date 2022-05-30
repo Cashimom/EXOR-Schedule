@@ -25,4 +25,24 @@ class PlanController extends Controller
     {
         return view('plan.resolution_plan');
     }
+
+    public function inputPlan()
+    {
+        return redirect()->route('index');
+    }
+
+    public function editPlan()
+    {
+        return redirect()->route('index');
+    }
+
+    public function deletePlan()
+    {
+        return redirect()->route('index');
+    }
+
+    public function decidePlan()
+    {
+        return redirect()->route('index');
+    }
 }

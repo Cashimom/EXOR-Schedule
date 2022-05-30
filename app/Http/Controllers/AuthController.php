@@ -16,4 +16,19 @@ class AuthController extends Controller
     {
         return view('auth.register');
     }
+
+    public function login()
+    {
+        return redirect()->route('register');
+    }
+
+    public function register()
+    {
+        return redirect()->route('index');
+    }
+
+    public function logout()
+    {
+        return redirect()->route('login');
+    }
 }
