@@ -21,11 +21,19 @@ Route::get('/', function () {
 });
 
 // Auth
-Route::get('/login', [AuthController::class, 'showLogin']);
-Route::get('/register', [AuthController::class, 'showRegister']);
+Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
+Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/register', [AuthController::class, 'register']);
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Plan
-Route::get('/index', [PlanController::class, 'showIndex']);
-Route::get('/input_plan', [PlanController::class, 'showInputPlan']);
-Route::get('/edit_plan', [PlanController::class, 'showEditPlan']);
-Route::get('/resolution_plan', [PlanController::class, 'showResolutionPlan']);
+Route::get('/index', [PlanController::class, 'showIndex'])->name('index');
+Route::get('/input_plan', [PlanController::class, 'showInputPlan'])->name('input_plan');
+Route::get('/edit_plan', [PlanController::class, 'showEditPlan'])->name('edit_plan');
+Route::get('/resolution_plan', [PlanController::class, 'showResolutionPlan'])->name('resolution_plan');
+Route::post('/input_plan', [PlanController::class, 'inputPlan']);
+Route::post('/edit_plan', [PlanController::class, 'editPlan']);
+Route::post('/delete_plan', [PlanController::class, 'deletePlan'])->name('delete_plan');
+Route::post('/decide_plan', [PlanController::class, 'decidePlan'])->name('decide_plan');
+
