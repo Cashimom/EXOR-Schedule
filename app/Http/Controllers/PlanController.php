@@ -8,21 +8,21 @@ class PlanController extends Controller
 {
     public function showIndex()
     {
-        return "Index View";
+        return view('plan.index');
     }
 
     public function showInputPlan()
     {
-        return "Input Plan View";
+        return view('plan.input_plan');
     }
 
     public function showEditPlan()
     {
-        return "Edit Plan View";
+        return view('plan.edit_plan');
     }
 
     public function showResolutionPlan()
     {
-        return "Resolution Plan View";
+        return view('plan.resolution_plan');
     }
 }
