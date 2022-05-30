@@ -22,7 +22,17 @@
     </head>
     <body class="antialiased">
         <div>
-            <h2>post tests</h2>
+            <h2>GET links</h2>
+            <!-- @@csrf必須 -->
+            <li><a href={{route('login')}}>login</a></li>
+            <li><a href={{route('register')}}>register</a></li>
+
+            <li><a href={{route('input_plan')}}>input_plan</a></li>
+            <li><a href={{route('edit_plan')}}>edit_plan</a></li>
+            <li><a href={{route('resolution_plan')}}>resolution_plan</a></li>
+        </div>
+        <div>
+            <h2>POST tests</h2>
             <!-- @@csrf必須 -->
             <form action={{ route('login'); }} method="post">@csrf<button type="submit">login</button></form>
             <form action={{ route('register'); }} method="post">@csrf<button type="submit">register</button></form>
